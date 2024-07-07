@@ -15,6 +15,7 @@ def create_user() -> dict:
     "address":fake.address(),
     "cpf":fake.cpf()
   }
+  print(data["password"])
   return data
  
 
