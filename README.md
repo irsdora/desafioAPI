@@ -14,7 +14,7 @@ squad adquiriu sobre:
 - Python
 - API
 
-## Desafio 🎯
+# Desafio 🎯
 1. O squad deverá criar um usuário no seguinte endpoint `https://desafiopython.jogajuntoinstituto.org/api/users/`
 
 2. Em seguida, deve fazer login com o usuário criado no endpoint `http://desafiopython.jogajuntoinstituto.org/api/users/login/`
@@ -44,7 +44,19 @@ squad adquiriu sobre:
     "password": "password"
 }
 ```
-# Pré-requisitos 📋
+
+# Resolução ✔️
+Foram criados dois arquivos para encapsulamento da resolução dos problemas: `usuario.py` e `login.py`.
+
+**Usuario** é responsável pela criação de uma persona - baseado no JSON acima - e o cadastro dessa persona na API.
+
+**Login** é responsável por efetuar a autenticação do usuário criado em `usuario` e armazenar a resposta com o *token JWT* e o *refresh token* em um arquivo chamado `token.json`.
+>[!TIP]
+> O arquivo `token.json` esta no `.gitignore` e por isso não é versionado ao Github.
+
+Abaixo deixo os requisitos e passo-a-passo caso deseje executar localmente.
+
+## Pré-requisitos 📋
 - [Python 3.x](https://www.python.org/downloads/) (Eu utilizei a versão `3.11.2` enquanto desenvolvia esse projeto).
 
 ## Virtual Environment 🌲
