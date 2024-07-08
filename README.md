@@ -96,7 +96,7 @@ Caso tenha sucesso, será gerado o arquivo `token.json` na pasta raíz.
 Se você quiser apoiar o projeto, deixe uma ⭐.
 
 ## Aspirantes da Automação 🚀
-Desenvolvido pela Squad Aspirantes da Automação durante o módulo avançado do curso **Bugou? QA TA ON" do **[Instituto Joga Junto](https://www.jogajuntoinstituto.org/)
+Desenvolvido pela Squad Aspirantes da Automação durante o módulo avançado do curso **Bugou? QA TA ON** do [Instituto Joga Junto](https://www.jogajuntoinstituto.org/)
 
 [Diogo Reis](https://www.linkedin.com/in/diogorreis/) <br>
 [George Neres](https://www.linkedin.com/in/george-neres-gsneres/) <br>
