@@ -1,6 +1,5 @@
 import sys
 import json
-import pprint
 import requests
 import usuario as user
 
