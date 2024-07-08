@@ -1,5 +1,6 @@
 import sys
 import json
+import pprint
 import requests
 import usuario as user
 
@@ -15,14 +16,14 @@ def login_by_api(email: str, password: str) -> dict:
     Realiza login na API com o email e senha fornecidos.
 
     Args:
-            email (str): O email do usuário.
-            password (str): A senha do usuário.
+        email (str): O email do usuário.
+        password (str): A senha do usuário.
 
     Returns:
-            dict: A resposta JSON da API se o login for bem-sucedido.
+        dict: A resposta JSON da API se o login for bem-sucedido.
 
     Exit:
-            O programa com uma mensagem de erro se o login não for bem-sucedido.
+        O programa com uma mensagem de erro se o login não for bem-sucedido.
     """
     response: requests.Response = requests.post(
         ENDPOINT, json={"email": email, "password": password}
@@ -38,16 +39,16 @@ def save_to_file(data: dict) -> None:
     Salva os dados fornecidos em um arquivo JSON.
 
     Args:
-            data (dict): Os dados a serem salvos no arquivo.
+        data (dict): Os dados a serem salvos no arquivo.
 
     Raises:
-            FileNotFoundError: Se o arquivo/PATH a ser salvo não for encontrado
-            IOError: Se houver algum erro durante o salvamento do arquivo
+        FileNotFoundError: Se o arquivo/PATH a ser salvo não for encontrado
+        IOError: Se houver algum erro durante o salvamento do arquivo
     """
     PATH = "token.json"
     try:
         with open(PATH, "w") as file:
-            json.dump(data, file, ensure_ascii=True)
+            json.dump(data, file, indent=4)
             print(f"Acesso salvo com sucesso em {PATH}")
     except FileNotFoundError:
         print(f"Arquivo {PATH} não encontrado...")
