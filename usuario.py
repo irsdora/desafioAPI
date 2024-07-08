@@ -47,7 +47,7 @@ def create_and_regiter_user() -> dict:
 	Gera uma persona e a registra na API.
 
 	Retorna:
-			dict: Os dados da persona gerada.
+		dict: Os dados da persona gerada.
 	"""
 	data = generate_persona() 
 	register_user_by_api(data)

@@ -13,14 +13,14 @@ def login_by_api(email: str, password: str) -> dict:
 	Realiza login na API com o email e senha fornecidos.
 
 	Args:
-			email (str): O email do usuário.
-			password (str): A senha do usuário.
+		email (str): O email do usuário.
+		password (str): A senha do usuário.
 
 	Returns:
-			dict: A resposta JSON da API se o login for bem-sucedido.
+		dict: A resposta JSON da API se o login for bem-sucedido.
 
 	Exit:
-			O programa com uma mensagem de erro se o login não for bem-sucedido.
+		O programa com uma mensagem de erro se o login não for bem-sucedido.
 	"""
 	response: requests.Response = requests.post(ENDPOINT, json={"email": email,"password": password})
 	if response.status_code == 200:
@@ -34,7 +34,7 @@ def save_to_file(data: dict) -> None:
 	Salva os dados fornecidos em um arquivo JSON.
 
 	Args:
-			data (dict): Os dados a serem salvos no arquivo.
+		data (dict): Os dados a serem salvos no arquivo.
 
 	Raises:
 		FileNotFoundError: Se o arquivo/PATH a ser salvo não for encontrado
