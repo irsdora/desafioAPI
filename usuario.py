@@ -1,4 +1,3 @@
-import sys
 import requests
 from faker import Faker
 
@@ -41,7 +40,7 @@ def register_user_by_api(persona: dict) -> dict:
     if response.status_code == 201:
         print("Usuário criado com sucesso!")
         return response.json()
-    sys.exit("ERR: Houve um problema ao registrar o usuário")
+    raise requests.exceptions.HTTPError(f"Houve um problema ao registar o usuário: STATUS CODE {response.status_code},\n{response.json()}")
 
 
 def create_and_regiter_user() -> dict:

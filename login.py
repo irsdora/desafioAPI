@@ -1,4 +1,3 @@
-import sys
 import json
 import requests
 import usuario as user
@@ -30,7 +29,7 @@ def login_by_api(email: str, password: str) -> dict:
     if response.status_code == 200:
         print("Login realizado com sucesso!")
         return response.json()
-    sys.exit("ERR: Houve um problema ao registrar o usuário")
+    raise requests.exceptions.HTTPError(f"Houve um problema ao realizar o login:\n STATUS CODE {response.status_code},\n{response.json()}")
 
 
 def save_to_file(data: dict) -> None:
